@@ -17,7 +17,7 @@
 
 .sng_poster img{
     width: 100%;
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4;
 }
 
 .sng_poster button{
@@ -38,6 +38,33 @@
 
 .sng_info strong{
     color: #4947ed;
+}
+
+.trailer-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 32px;
+    background: transparent;
+    font-weight: 100;
+}
+
+.trailer-frame{
+    width: 800px;
+    height: 520px;
 }
 
 @media (max-width:576px) {
@@ -72,5 +99,10 @@
     }
     .sng_info p{
         font-size: 14px;
+    }
+    .trailer-frame{
+        width: 100%;
+        height: 220px;
+        aspect-ratio: 2/1;
     }
 }

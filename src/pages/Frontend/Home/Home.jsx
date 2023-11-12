@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import AuthContext from '../../../contexts/AuthContext'
 import axiosInstance from '../../../services/axios'
 import {apiUrl} from '../../../services/api'
@@ -32,9 +32,9 @@ function Home() {
             <h1 className='text-lg md:text-4xl md:pb-2'>In Cinemas</h1>
             <div className="mvGrid">
               {movies.map((movie, index)=>(
-                <div key={index} className="mvCard" >
+                <Link to={`/${movie.id}/${movie.title}`} key={index} className="mvCard" >
                   <img src={apiUrl+movie.poster} alt={movie.title} />
-                </div>
+                </Link>
               ))}
             </div>
           </div>

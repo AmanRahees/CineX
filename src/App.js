@@ -31,7 +31,7 @@ function App() {
         </Route>
 
         <Route path='/' element={<Home/>} />
-        <Route path='/movie' element={<Movie/>} />
+        <Route path='/:id/:movie' element={<Movie/>} />
 
         <Route element={<AdminAuthRoute/>}>
           <Route path='/admin/login' element={<AdminLogin/>} />
