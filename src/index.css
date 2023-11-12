@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/Fonts/Poppins-Regular.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Belleza';
+  src: url('assets/Fonts/Belleza-Regular.ttf');
+}
+
+*{
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.main{
+  background: #000000f0;
+  color: white;
+  min-height: 100vh;
+}
+
+.admin-panel{
+  background: #efefef;
+  color: #000;
+  min-height: 100vh;
+}
+
+.font-poppins{
+  font-family: 'Poppins';
+}
+
+.font-belleza{
+  font-family: "Belleza";
+}
+
+.db-paginator{
+  display: flex;
+  justify-content: end;
+  margin: 20px 5px;
+  gap: 3px;
+}
+
+.db-paginator button{
+  background: #000;
+  color: #fff;
+  padding: 3px 8px;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.db-paginator button[disabled]{
+  background: #ddd;
+  color: #fff;
+}
+
+textarea{
+  resize: none;
+  overflow-y: scroll;
+}
+
+textarea::-webkit-scrollbar{
+  display: none;
+}
+
+.bdyComp{
+  min-height: 100vh;
+  height: 100%;
+}
+
+.main-container{
+  padding: 100px;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+  appearance: none;
+}
+
+@media (max-width:756px) {
+  .db-paginator button{
+    padding: 2px 6px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:576px) {
+  .main-container{
+    padding: 60px 30px;
+  }
 }

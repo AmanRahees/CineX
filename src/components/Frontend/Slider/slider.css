@@ -1,0 +1,165 @@
+.bnr_container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bnr_carousal{
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.bnr_carousal *{
+    font-family: "Poppins";
+}
+
+.bnr_carousal .slide{
+    flex: 0 0 100%;
+    display: none;
+    position: relative;
+}
+
+.bnr_carousal .slide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bnr_carousal .slide.active {
+    display: block;
+}
+
+.bnr_carousal .slide img{
+    width: 100%;
+    aspect-ratio: 6/3;
+    display: block;
+}
+
+#bnrPrev, #bnrNext{
+    position: absolute;
+    top: 50%;
+    padding: 6px 10px;
+    font-size: 30px;
+}
+
+#bnrNext{
+    right: 0;
+}
+
+#bnrPrev:hover, #bnrNext:hover{
+    background: #ffffff22;
+    scale: 1.1;
+}
+
+.bnrInfo{
+    position: absolute;
+    top: 40%;
+    margin: 0 10%;
+}
+
+.bnrInfo h1{
+    font-size: 56px;
+    font-weight: 900;
+}
+
+.bnrInfo .bnrOvrw{
+    display: -webkit-box;
+    width: 60%;
+    height: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-size: 20px;
+}
+
+.bnrInfo button{
+    background: #3D39FF;
+    color: #fff;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+@media (max-width:992px) {
+    .bnrInfo{
+        position: absolute;
+        top: 35%;
+        margin: 0 10%;
+    }
+    .bnrInfo h1{
+        font-size: 52px;
+        font-weight: 900;
+    }
+    .bnrInfo .bnrOvrw{
+        display: -webkit-box;
+        width: 80%;
+        height: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .bnrInfo{
+        position: absolute;
+        top: 35%;
+        margin: 0 10%;
+    }
+    .bnrInfo h1{
+        font-size: 46px;
+        font-weight: 900;
+    }
+    .bnrInfo .bnrOvrw{
+        display: -webkit-box;
+        width: 80%;
+        height: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width:576px) {
+    #bnrPrev, #bnrNext{
+        font-size: 18px;
+    }    
+    #bnrPrev:hover, #bnrNext:hover{
+        background: #ffffff44;
+    }
+    .bnrInfo{
+        position: absolute;
+        top: 35%;
+        margin: 0 10%;
+    }
+    .bnrInfo h1{
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .bnrInfo .bnrOvrw{
+        display: -webkit-box;
+        width: 100%;
+        height: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: 10px;
+    }
+    .bnrInfo button{
+        padding: 3px 6px;
+        font-size: 8px;
+        margin: 5px 0;
+    }
+}

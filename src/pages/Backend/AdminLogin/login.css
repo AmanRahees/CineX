@@ -1,0 +1,20 @@
+.amd-lgIn{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.amdlgDv{
+    background: #c6dae4;
+}
+
+.amdlgDv2{
+    background: #ffffff11;
+    backdrop-filter: blur(50px);
+}
+
+.f24{
+    color: #586f7c;
+}

@@ -1,0 +1,145 @@
+.bnr_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.bnr_Dv{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.bnr_Dv *{
+    font-family: 'Poppins';
+}
+
+.bnr_Dv button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 15px;
+    background: red;
+    color: #fff;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.bnr_Dv button:hover{
+    transform: scale(1.03);
+}
+
+.bnr_shade{
+    position: absolute;
+    background: #00000077;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.bnr_Dv h1{
+    font-size: 38px;
+    margin-top: 6%;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.bnr_Dv .ovrVw{
+    display: -webkit-box;
+    width: 60%;
+    height: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-size: 20px;
+}
+
+.bAdd_wrapper *{
+    font-family: "Poppins";
+}
+
+.bannerPreview{
+    position: relative;
+    display: inline-block;
+}
+
+.bannerPreview img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
+}
+
+.bannerPreview button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: red;
+    color: #fff;
+}
+
+.bannerPreview button:hover{
+    background: red;
+    color: #fff;
+}
+
+@media (max-width:768px) {
+    .bnr_wrapper{
+        margin: 30px 0;
+    }
+    .bnr_Dv button{
+        padding: 3px 8px;
+    }
+    .bnr_shade{
+        padding: 0 30px;
+    }
+    .bnr_Dv h1{
+        font-size: 24px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    .bnr_Dv .ovrVw{
+        width: 60%;
+        height: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:576px) {
+    .bnr_wrapper{
+        margin: 30px 0;
+    }
+    .bnr_Dv button{
+        padding: 1px 6px;
+    }
+    .bnr_shade{
+        padding: 0 10px;
+    }
+    .bnr_Dv h1{
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+    .bnr_Dv .ovrVw{
+        width: 60%;
+        height: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: 10px;
+    }
+}

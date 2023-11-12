@@ -1,0 +1,20 @@
+footer{
+    background: #000;
+    border-top: 1px solid #222;
+    padding: 30px 0;
+}
+
+footer p{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+
+@media (max-width:576px) {
+    footer{
+        padding: 15px 0;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}

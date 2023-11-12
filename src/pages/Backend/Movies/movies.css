@@ -1,0 +1,179 @@
+.create-btns{
+    background: rgb(135, 178, 202);
+    color: #fff;
+    float: right;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    padding: 5px 6px;
+    border-radius: 1px;
+}
+
+.create-btns:hover{
+    background: rgb(96, 154, 185);
+}
+
+.mv_filter{
+    display: flex;
+    gap: 5px;
+}
+
+.mv_filter button{
+    font-family: "Poppins";
+    font-size: 14px;
+    padding: 3px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.mv_filter button.active{
+    background: #000;
+    color: #fff;
+}
+
+.mvList-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+    gap: 1%;
+}
+
+.mv_card{
+    position: relative;
+    cursor: pointer;
+}
+
+.mv_card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.mv_card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  height: auto;
+  display: block;
+}
+
+.mv_card button{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: #000;
+    border: 1px solid #555;
+    font-family: "Poppins";
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.mv_card:hover::before{
+    opacity: 1;
+}
+
+.mv_card:hover button{
+    opacity: 1;
+}
+
+.mvAdd_wrap{
+    display: flex;
+    gap: 30px;
+}
+
+.mvAdd_wrap *{
+    font-family: 'Poppins';
+}
+
+.mvForm, .mvForm2{
+    width: 50%;
+    height: 100%;
+}
+
+.mvAdd_wrap input, .mvAdd_wrap textarea, .mvAdd_wrap select, .dragBox{
+    background: #f1f7f7;
+}
+
+.dragBox{
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border: 1px dashed #555;
+    color: #333;
+}
+
+.dragBox input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    opacity: 0;
+}
+
+.posterPreview{
+    position: relative;
+    display: inline-block;
+}
+
+.posterPreview button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: red;
+    color: #fff;
+}
+
+.posterPreview button:hover{
+    background: red;
+    color: #fff;
+}
+
+@media (max-width:992px) {
+    .mvList-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .create-btns{
+        font-size: 8px;
+    }
+    .mv_filter button{
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+    .mvList-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .mv_card button{
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    .mvAdd_wrap{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .mvForm, .mvForm2{
+        width: 100%;
+        height: 100%;
+    }
+    .dragBox{
+        height: 150px;
+        border: 1.5px dashed rgba(169, 178, 190, 1);
+    }
+}
+
+@media (max-width:576px) {
+    .mvList-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

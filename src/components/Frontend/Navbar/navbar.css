@@ -1,0 +1,179 @@
+.Navbar{
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.Navbar.scrolled{
+    background: #000;
+}
+
+.nav-container{
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-logo img{
+    width: 40px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.nav-elements{
+    position: relative;
+}
+
+.nav-elements ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.nav-elements ul li{
+    padding: 10px;
+}
+
+.nav-elements ul li.active{
+    color: #3D39FF;
+}
+
+.nav-login{
+    background: #3D39FF;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.nav-login:hover{
+    background: #2321B5;
+}
+
+.user-component{
+    position: relative;
+}
+
+.user-component img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.comp-opts{
+    position: absolute;
+    background: #131313;
+    right: 5%;
+    border: 1px solid #333333;
+}
+
+.comp-opts ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100px;
+    padding: 10px;
+}
+
+.comp-opts ul li{
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+}
+
+.modal-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.913);
+    z-index: 1000;
+}
+
+.LogoutDv{
+    position: fixed;
+    font-family: 'Poppins';
+    border: 1px solid #222;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    z-index: 1001;
+}
+
+.nav-close{
+    display: none;
+}
+
+@media (max-width:576px){
+    .Navbar{
+        height: 60px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    .nav-close{
+        display: block;
+    }
+    .nav-container{
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .nav-logo img{
+        width: 30px;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-elements{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #000;
+        height: 100vh;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        width: 0;
+    }
+    .nav-elements.active{
+        width: 40%;
+    }
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 30px;
+        gap: 3px;
+    }
+    .nav-elements ul li {
+        padding: 10 30px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .nav-elements ul li.active{
+        color: #3D39FF;
+    }
+    .nav-login{
+        background: transparent;
+        padding: 0;
+    }
+    .nav-login:hover{
+        background: transparent;
+    }
+    .user-component{
+        display: flex;
+        justify-content: center;
+    }
+    .comp-opts{
+        position: absolute;
+        background: #131313;
+        border: 1px solid #333333;
+        width: 120px;
+        margin-top: 30px;
+    }
+} 

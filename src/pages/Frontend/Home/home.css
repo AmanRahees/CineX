@@ -1,0 +1,52 @@
+.mvGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+    gap: 1%;
+    padding: 10px 0;
+}
+
+.mvCard{
+    position: relative;
+    cursor: pointer;
+}
+
+.mvCard::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.mvGrid img{
+    width: 100%;
+    aspect-ratio: 2/3;
+    height: auto;
+    display: block;
+}
+
+.mvCard:hover::before{
+    opacity: 1;
+}
+
+@media (max-width:992px) {
+    .mvGrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .mvGrid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:576px) {
+    .mvGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
